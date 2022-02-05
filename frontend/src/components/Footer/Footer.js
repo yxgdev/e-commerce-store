@@ -74,7 +74,6 @@ const Footer = () => {
           <EmailIcon style={{ marginRight: 10 }} />
           contact@something.dev
         </ContactItem>
-        {/* <Payment /> */}
       </Right>
     </Container>
   );

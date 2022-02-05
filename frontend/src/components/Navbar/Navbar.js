@@ -21,7 +21,7 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder="Search" />
             <SearchIcon style={{ color: "grey", fontSize: "16px" }} />
           </SearchContainer>
         </Left>
