@@ -1,6 +1,7 @@
 import React from "react";
 import Annoucement from "../Annoucement/Annoucement";
 import Categories from "../Categories/Categories";
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import Newsletter from "../Newsletter.js/Newsletter";
 import Products from "../Products/Products";
@@ -15,6 +16,7 @@ const Home = () => {
       <Categories />
       <Products />
       <Newsletter />
+      <Footer />
     </>
   );
 };
