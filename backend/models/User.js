@@ -20,7 +20,10 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    createdAt: Date.now(),
+    createdAt: {
+      type: Date,
+      default: Date.now(),
+    },
   },
   { timestamps: true }
 );

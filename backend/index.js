@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRoutes from "./routes/user.js";
+import authRoutes from "./routes/auth.js";
 
 dotenv.config();
 
@@ -23,3 +24,4 @@ mongoose
 //   routes
 app.use(express.json());
 app.use("/api/users", userRoutes);
+app.use("/api/auth", authRoutes);
