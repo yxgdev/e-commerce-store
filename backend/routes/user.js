@@ -31,7 +31,6 @@ router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
     res.status(500).json(error);
   }
 });
-export default router;
 
 // DELETE
 
@@ -97,3 +96,4 @@ router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
     res.status(500).json(error);
   }
 });
+export default router;
