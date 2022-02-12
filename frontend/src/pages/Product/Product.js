@@ -27,6 +27,9 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import { publicRequest } from "../../requestMethods";
 import { useLocation } from "react-router-dom";
+import { addProduct } from "../../redux/cartRedux";
+import { useDispatch } from "react-redux";
+
 const Product = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
@@ -34,6 +37,8 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getProduct = async () => {
@@ -55,6 +60,7 @@ const Product = () => {
 
   const handleClick = () => {
     // update cart
+    dispatch(addProduct({ product, quantity, color, size }));
   };
   return (
     <Container>
